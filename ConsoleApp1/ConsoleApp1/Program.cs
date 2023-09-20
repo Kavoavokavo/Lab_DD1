@@ -33,21 +33,19 @@ class Calculator
                 result = num1 * num2;
                 break;
             case '/':
-            //    if (num2 != 0) // Проверка деления на ноль
-            //    {
-                result = num1 / num2;
-                break;
-            //        result = num1 / num2;
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("Ошибка: Деление на ноль!");
-            //        return;
-            //    }
-            //    break;
-            //default:
-            //    Console.WriteLine("Ошибка: Неверная операция!");
-            //    return;
+                if (num2 != 0) // Проверка деления на ноль
+                    {
+                    result = num1 / num2;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Ошибка: Деление на ноль!");
+                    return;
+                }
+            default:
+                Console.WriteLine("Неверная операция!");
+                return;
         }
 
         Console.WriteLine($"Результат: {num1} {operation} {num2} = {result}");
